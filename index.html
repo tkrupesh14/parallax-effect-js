@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect by Krupesh Vithlani</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <img src="./stars.png" id="stars">
+        <img src="./moon.png" id="moon">
+        <img src="./mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Krupesh Vithlani</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="./mountains_front.png" id="mountains_front">
+    </section>
+
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effect</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident ipsam id, nam soluta omnis eum eaque? Quos, quidem vel placeat officiis consectetur qui animi sunt excepturi, libero nulla minima modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quas nihil quisquam labore, rem obcaecati sequi autem vel nesciunt ipsam veritatis omnis optio consectetur ut modi dolores? Hic, inventore voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde explicabo officia dolor impedit quidem corrupti sit aperiam error, eaque ad eligendi libero adipisci mollitia! Inventore atque in vero consectetur cumque?<br><br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident ipsam id, nam soluta omnis eum eaque? Quos, quidem vel placeat officiis consectetur qui animi sunt excepturi, libero nulla minima modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quas nihil quisquam labore, rem obcaecati sequi autem vel nesciunt ipsam veritatis omnis optio consectetur ut modi dolores? Hic, inventore voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde explicabo officia dolor impedit quidem corrupti sit aperiam error, eaque ad eligendi libero adipisci mollitia! Inventore atque in vero consectetur cumque?<br><br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident ipsam id, nam soluta omnis eum eaque? Quos, quidem vel placeat officiis consectetur qui animi sunt excepturi, libero nulla minima modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quas nihil quisquam labore, rem obcaecati sequi autem vel nesciunt ipsam veritatis omnis optio consectetur ut modi dolores? Hic, inventore voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde explicabo officia dolor impedit quidem corrupti sit aperiam error, eaque ad eligendi libero adipisci mollitia! Inventore atque in vero consectetur cumque?<br><br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident ipsam id, nam soluta omnis eum eaque? Quos, quidem vel placeat officiis consectetur qui animi sunt excepturi, libero nulla minima modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quas nihil quisquam labore, rem obcaecati sequi autem vel nesciunt ipsam veritatis omnis optio consectetur ut modi dolores? Hic, inventore voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde explicabo officia dolor impedit quidem corrupti sit aperiam error, eaque ad eligendi libero adipisci mollitia! Inventore atque in vero consectetur cumque?<br><br></p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn= document.getElementById('btn');
+        let mountains_front= document.getElementById('mountains_front');
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.05 + 'px';
+            text.style.marginRight = value * 2 + 'px';
+            
+        })
+
+    </script>
+</body>
+</html>
